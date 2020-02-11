@@ -3,14 +3,18 @@ package JavaB;
 public abstract class AbstractFactory {
 
     int quota;
+    protected BarcodeScanner barcodeScanner;
     abstract boolean receiveComponents();
-    abstract void sortComponents();
-    abstract void assembly();
-    abstract void packageProduct();
-    abstract void send();
+    abstract boolean sortComponents();
+    abstract boolean assembly();
+    abstract boolean packageProduct();
+    abstract boolean send();
 
     public AbstractFactory(int q) {
         this.quota = q;
+        this.barcodeScanner = BarcodeScanner.getInstance();
     }
+
+
 }
 

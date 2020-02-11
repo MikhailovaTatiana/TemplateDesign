@@ -12,22 +12,22 @@ public class BikeFactory extends AbstractFactory {
     }
 
     @Override
-    void sortComponents() {
+    boolean sortComponents() {
         System.out.println("Sorting components for bike");
     }
 
     @Override
-    void assembly() {
+    boolean assembly() {
         System.out.println("Assembly bike managed");
     }
 
     @Override
-    void packageProduct() {
+    boolean packageProduct() {
         System.out.println("Does nothing on bike");
     }
 
     @Override
-    void send() {
+    boolean send() {
         System.out.println("Sending bike");
     }
 }
